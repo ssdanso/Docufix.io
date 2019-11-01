@@ -44,7 +44,7 @@ button.navbar-toggler{
 }
 a:hover{
     transition: 0.5s;
-    color: #3B1F9E !important;
+    color: #3B1F9E;
 }
 .top-nav-collapse {
     background-color: #fff;
