@@ -54,7 +54,7 @@ a:hover{
     color:  #828282 !important;
     font-style: normal;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 14px;
   }
   #footer a:hover{
@@ -101,11 +101,12 @@ a:hover{
 }
 
 .header-text {
-    font-size: 40px;
+    font-size: 30px;
     color: #3B1F9E;
     line-height: 75px !important;
     margin: 30px 0px 25px 48px;
     font-family: 'Nunito', sans-serif;
+    font-weight: bold;
 }
 
 .collapsible {
@@ -120,7 +121,7 @@ a:hover{
     border-bottom: none;
     text-align: left;
     outline: none !important;
-    font-size: 25px;
+    font-size: 18px;
     line-height: 40px;
     font-family: 'Nunito', sans-serif;
 }
