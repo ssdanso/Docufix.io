@@ -1,0 +1,57 @@
+body{
+	background: #E5E5E5;
+}
+.content{
+	padding-top: 100px;
+}
+.compare {
+	background: rgba(59, 31, 158, 0.05);
+	padding: 10px 10px;
+	color: #3B1F9E;
+
+}
+.other {
+	background: rgba(59, 31, 158, 0.05);
+	color: #3B1F9E;
+}
+h3, h5{
+	font-weight: bold !important;
+}
+.button a {
+
+	font-size: 12px;
+	background: rgba(59, 31, 158, 0.05);
+	font-weight: bold;
+	border-radius: 50px;
+	color: #3B1F9E;
+}
+.btn-group {
+	text-align: center;
+}
+
+label {
+	background: rgba(59, 31, 158, 0.05) !important;
+	color: #3B1F9E !important;
+	font-weight: bold !important;
+}
+ .btn-1 {
+ 	font-weight: bold !important;
+	padding: 8px 50px !important;
+	border-radius: 50px !important;
+	color: #3B1F9E !important;
+	background: rgba(59, 31, 158, 0.05) !important; 
+	font-size: 18px !important;
+	border-width: 0px;
+}
+.btn-2 {
+	background:#3B1F9E;
+	color: white !important;
+	font-size: 18px !important;
+	border-width: 0px;
+	font-weight: bold !important;
+	padding: 8px 50px !important;
+	border-radius: 50px !important;
+}
+.textarea{
+	background: white;
+}
