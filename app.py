@@ -22,6 +22,7 @@ stop_words = stopwords.words("english")
 extensions1 = ['jpg','png','jpeg','bmp','svg']
 extensions2= ['pdf','xps','epub']
 extensions3=['docx']
+ext4 =['txt']
 pt.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 # route and function to handle the upload page
 @app.route('/', methods=['GET', 'POST'])
@@ -46,10 +47,14 @@ def upload():
                 
                 elif file.filename.rsplit('.',1)[1].lower() in extensions3:
                     c= docu(os.path.join(app.config['UPLOAD_FOLDER'], fname))
-                else:
+                elif file.filename.rsplit('.',1)[1].lower() in ext4:
                    c = txt(os.path.join(app.config['UPLOAD_FOLDER'], fname))
+                else:
+                    d= request.form.get('text')
+                    c = text(d)
             except IndexError:
-                c= txt(os.path.join(app.config['UPLOAD_FOLDER'], fname))
+                d= request.form.get('text')
+                c=text(d)
           
             q,t = sim(c)
             if q == '':
@@ -70,6 +75,9 @@ def txt(text):
     t = open(text,'r',encoding="utf-8", errors='ignore')
     jn = t.read()
     return jn
+def text(text):
+    t = text
+    return t
 def docu(filename):
     doc = docx.Document(filename)
     fullText = []
