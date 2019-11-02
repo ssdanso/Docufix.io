@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Docufix | Header & Footer</title>
+        <title>Docufix</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
@@ -21,13 +21,12 @@
     apiKey: "vXj90M2ifAvu8fS739jFKepTXtES72ur59sGR5TPK9c="
     </script>
     </head>
-
     <body style="background-color:  white; font-family: Ubuntu;"
     onload="view()">
         <!--Header-->
         <div class="w3-container" >
             <div id="id01" class="w3-modal" >
-              <div class="w3-modal-content mb-0">
+              <div class="w3-modal-content mb-2 mt-5 mt-md-0">
                 <span onclick="document.getElementById('id01').style.display='none'"
                   class="w3-button w3-display-topright mb-0">&times;</span>
                   
@@ -73,7 +72,7 @@
           </div>
           <header>
             <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-              <a class="navbar-brand px-sm-5 ml-3" href="index,html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX"></a>
+              <a class="navbar-brand px-sm-5 ml-3" href="index,html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -123,7 +122,7 @@
                     <div class="col-md-4 ml-0 ml-md-3 mt-4 mt-md-0 p-2" style="border: 1px solid rgba(222, 230, 234, 0.6); background: #F6F8F9">
                             <h5 class="mb-5" style="color: rgba(12, 10, 90, 0.8)">Other Tools:</h5>
                             <a class="btn btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Grammar check</a>
-                            <a class="btn btn-sm rounded-pill font-weight-bold mt-md-0" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Check for Duplicates</a>
+                            <a class="btn btn-sm rounded-pill font-weight-bold mt-md-0 mt-2" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Check for Duplicates</a>
                             <div class="btn float-right " style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()">Instructions</div>
                     </div>
                 </div>
@@ -142,11 +141,11 @@
               <div class="row mt-5">
                   <div class="col-md-12 text-center">
                     <div class="btn p-0 rounded-pill py-2" style=" background-color: rgba(59, 31, 158, 0.05)">
-                      <div class="btn-sm btn rounded-pill active1 px-0"  id="fileBtn"><a href="#" class=" px-5 py-3 rounded-pill "
-                        style="text-decoration: none; margin-right: 10px;">File</a></div>
-                      <div class="btn-sm btn rounded-pill px-0"  id="textBtn"><a class="px-5 py-3 rounded-pill " href="#"
+                      <div class="btn-sm btn rounded-pill active1 px-0"  id="fileBtn" ><span class=" px-5 py-3 rounded-pill "
+                        style="text-decoration: none; margin-right: 10px;">File</span></div>
+                      <div class="btn-sm btn rounded-pill px-0"  id="textBtn" style="cursor: pointer"><span class="px-5 py-3 rounded-pill " 
                         style="text-decoration: none; margin-left: 10px">Text
-                      </a></div>
+                      </span></div>
                   </div>
                   </div>
               </div>
@@ -163,7 +162,7 @@
                                 class="p-2" width="100%"></div>
                             <div class="custom-file col-md-8 mx-auto pt-3" style="color: #0C105F">
                               <label for="upload1" id="label1" class="text-center mr-md-5 pt-5"
-                                style=""> <span id="labell1" class="pl-4" style=" color:#828282; cursor: pointer;">Click to add a file</span> 
+                                style=""> <span id="labell1" class="pl-4" style=" color:#828282; cursor: pointer;font-weight: normal">Click to add a file</span> 
                                 <input id="upload1" type="file" name="file1" accept="" class="custom-file-input"
                                   style="border: 0;background-color:rgba(61, 155, 218, 0.4);" required />
                                 <div class="invalid-feedback">
@@ -185,7 +184,7 @@
                                 class="p-2" width="100%"></div>
                             <div class=" col-md-8 mx-auto pt-3">
                               <label for="upload2" id="label2" class="text-center mr-md-5 pt-5"
-                                style=""> <span id="labell2" class="pl-4" style=" color:#828282;cursor: pointer;">Click to add a file</span> 
+                                style=""> <span id="labell2" class="pl-4" style=" color:#828282;cursor: pointer;font-weight: normal">Click to add a file</span> 
                                 <input id="upload2" for="secondDocument" type="file" name="file2" accept=""
                                   class="custom-file-input" style="border: 0;background-color: transparent;" required />
                                   
