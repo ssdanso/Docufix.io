@@ -30,7 +30,13 @@ def upload():
     if request.method == 'POST':
         # check if there is a file in the request
         if 'file' not in request.files:
-           return render_template('plagiarism.html', text='No file selected') 
+           data=request.form.get('text')
+            q,t = sim(c)
+            if q == '':
+                replyy = 'Sorry Character could not be clearly recognized'
+                return render_template('plagiarism.html', text=replyy)
+            # extract the text and display it
+            return render_template('plagiarism.html', text='Result: '+q+', percentage match: '+t)
         file = request.files['file']
         # if no file is selected
         if file.filename == '':
