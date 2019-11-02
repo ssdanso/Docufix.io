@@ -362,6 +362,10 @@ body {
 }
 
 @media (min-width: 900px) {
+  .banner-wrapper {
+        padding-top: 10px !important;    
+    }
+  
   .banner-wrapper .b-btn {
     padding: 10px 20px;
   }
