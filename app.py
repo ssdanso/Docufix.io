@@ -30,11 +30,19 @@ def upload():
     if request.method == 'POST':
         # check if there is a file in the request
         if 'file' not in request.files:
-            return render_template('fileUpload.html', text='No file selected')
+           return render_template('plagiarism.html', text='No file selected') 
         file = request.files['file']
         # if no file is selected
         if file.filename == '':
-            return render_template('fileUpload.html', text='No file selected')
+            return render_template('plagiarism.html', text='No file selected')
+        if not file:
+            data=request.form.get('text')
+            q,t = sim(c)
+            if q == '':
+                replyy = 'Sorry Character could not be clearly recognized'
+                return render_template('plagiarism.html', text=replyy)
+            # extract the text and display it
+            return render_template('plagiarism.html', text='Result: '+q+', max percentage match: '+t)
 
         if file and allowed_file(file.filename):
             fname = secure_filename(file.filename)
@@ -59,11 +67,11 @@ def upload():
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('fileUpload.html', text=replyy)
+                return render_template('plagiarism.html', text=replyy)
             # extract the text and display it
-            return render_template('fileUpload.html', text='Result: '+q+', max percentage match: '+t)
+            return render_template('plagiarism.html', text='Result: '+q+', max percentage match: '+t)
     
-    return render_template('fileUpload.html')
+    return render_template('plagiarism.html')
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 def picture(filename):
