@@ -1,8 +1,11 @@
 body{
-	background: #E5E5E5;
+	background-color: #FAFAFA !important;
 }
 .content{
 	padding-top: 100px;
+}
+header .nav {
+	background: white !important;
 }
 .compare {
 	background: rgba(59, 31, 158, 0.05);
@@ -14,7 +17,7 @@ body{
 	background: rgba(59, 31, 158, 0.05);
 	color: #3B1F9E;
 }
-h3, h5{
+h3, h5, h6{
 	font-weight: bold !important;
 }
 .button a {
@@ -35,6 +38,7 @@ label {
 	font-weight: bold !important;
 }
  .btn-1 {
+ 	outline: 0;
  	font-weight: bold !important;
 	padding: 8px 50px !important;
 	border-radius: 50px !important;
@@ -44,6 +48,7 @@ label {
 	border-width: 0px;
 }
 .btn-2 {
+	outline: 0;
 	background:#3B1F9E;
 	color: white !important;
 	font-size: 18px !important;
@@ -52,6 +57,31 @@ label {
 	padding: 8px 50px !important;
 	border-radius: 50px !important;
 }
+.btn-3{
+	outline: 0;
+ 	font-weight: bold !important;
+	padding: 3px 20px !important;
+	border-radius: 50px !important;
+	color: #3B1F9E !important;
+	background: rgba(59, 31, 158, 0.05) !important; 
+	font-size: 18px !important;
+	border-width: 0px;
+	margin-bottom: 30px;
+}
 .textarea{
 	background: white;
+}
+.ta {
+display: flex;
+justify-content: space-between;
+
+}
+.folder {
+	background-color:white !important;
+}
+#FormControlTextarea1 {
+	border-left-width: 0;
+}
+#FormControlTextarea2 {
+	border-right-width: 0;
 }
