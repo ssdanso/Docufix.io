@@ -30,8 +30,9 @@ def upload():
     if request.method == 'POST':
         # check if there is a file in the request
         if 'file' not in request.files:
-           data=request.form.get('text')
-           q,t = sim(data)
+           data=str(request.form['message'])
+           c = text(data)
+           q,t = sim(c)
            if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
                 return render_template('plagiarism.html', text=replyy)
@@ -40,8 +41,9 @@ def upload():
         file = request.files['file']
         # if no file is selected
         if file.filename == '':
-            data=request.form.get('text')
-            q,t = sim(data)
+            data=str(request.form['message'])
+            c = text(data)
+            q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
                 return render_template('plagiarism.html', text=replyy)
