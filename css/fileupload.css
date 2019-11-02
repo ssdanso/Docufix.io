@@ -110,7 +110,7 @@ h4,
 p {
     color: rgba(12, 10, 90, 0.8);
 }
-a {
+span {
     color: rgba(12, 10, 90, 0.8);
     font-weight: bold;
 }
@@ -118,7 +118,7 @@ a:hover {
     text-decoration: none;
 }
 
-.active1 a {
+.active1 span {
     color: white;
     font-weight: bold;
     background-color: #3b1f9e;
