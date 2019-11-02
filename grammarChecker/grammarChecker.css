@@ -3,11 +3,7 @@
 				overflow-x: hidden;
 			}
              
-      /*      body {
-   
-	font-family: Tahoma, sans-serif;
-}
-*/
+    
 p, li {
 	font-size: 1.4em;
 }
@@ -68,6 +64,9 @@ textarea {
         textarea{
           min-width: 200px;
         
+			}
+			h1{
+				font-size: 1em;
 			}
 
 }
