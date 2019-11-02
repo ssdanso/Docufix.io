@@ -36,7 +36,7 @@ def upload():
                 replyy = 'Sorry Character could not be clearly recognized'
                 return render_template('plagiarism.html', text=replyy)
             # extract the text and display it
-            return render_template('plagiarism.html', text='Result: '+q+', percentage match: '+t)
+           return render_template('plagiarism.html', text='Result: '+q+', percentage match: '+t)
         file = request.files['file']
         # if no file is selected
         if file.filename == '':
