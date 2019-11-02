@@ -6,13 +6,13 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif !important;
   overflow-x: hidden;
 }
 
 .banner-wrapper {
   width: 90%;
-  margin: auto;
+  margin:  0 auto;
   padding-top: 50px;
 }
 
@@ -414,7 +414,7 @@ body {
   }
   .content-wrapper .content {
     width: 85%;
-    margin: auto;
+    margin: 0 auto;
   }
   .content-wrapper .about-wrapper h3,
   .content-wrapper .feature-wrapper h3,
@@ -424,7 +424,7 @@ body {
   .feature-content-wrapper {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
+    -ms-grid-columns: (1fr)(3);
         grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(365px, auto);
     grid-column-gap: 51px;

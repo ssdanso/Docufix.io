@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -15,7 +16,7 @@
     <!--Header-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-            <a class="navbar-brand px-5 ml-3" href="#"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX"></a>
+            <a class="navbar-brand px-sm-5 ml-3" href="#"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -61,7 +62,7 @@
         </div>
     </section>
 
-    <section class="content-wrapper">
+    <section class="content-wrapper ">
         <div class="content">
             <!-- <div class="about-wrapper">
                 <h3>About Docufix</h3>
@@ -186,6 +187,7 @@
                 </div>
             </div>
         </div>
+        <p class="text-center">This app was built by <a href="https://hng.tech/">HNGi6</a> interns</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -196,7 +198,7 @@
         AOS.init();
     </script>
     <script>
-        var SCROLLING_NAVBAR_OFFSET_TOP = 100;
+        var SCROLLING_NAVBAR_OFFSET_TOP = 50;
         $(window).on("scroll", function() {
             var $navbar = $(".navbar");
         
