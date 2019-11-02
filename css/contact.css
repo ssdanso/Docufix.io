@@ -1,21 +1,31 @@
-.form-area{
-    background: white;
-    margin-top: 100px;
-    margin-bottom: 40px;
-    padding: 20px;
-    box-shadow: 0px 0px 4px 1px #3B1F9E;
+body{
+    margin: 5px;
+    text-align: justify;
+    border-color: #3B1F9E;
 }
 
-hr{
-    background: #3B1F9E;
+.container{
+    margin-bottom: 40px;
+}
+
+.address-area{
+    font-size: large;
+    padding: 20px;
 }
 
 h1{
     color: #3B1F9E;
 }
 
-.container{
-    width: 100em;
+h2{
+    text-align: right;
+    padding: 20px;
+    color: #3B1F9E;
+    font-weight: bold;
+}
+
+hr{
+    background: #3B1F9E;
 }
 
 .btn-primary{
@@ -23,89 +33,35 @@ h1{
     border-color: #3B1F9E;
 }
 
-.form-box {
-        padding:4rem 6rem;
-        border:6px solid #3D9BDA;
-        border-radius: 20px;
-        border-top-width: 12px;
-        border-bottom-width: 12px;
-        max-width: 70%;
-        margin:auto;
-        margin-top: -1em;
-        margin-bottom: 2em;
-        min-height: 60px;
+.form-area {
+    font-weight: normal;
+    font-family: Nunito;
+    font-size: 14px;
+    width: fit-content;
+    padding-bottom: 10px;
+    margin-top: 100px;
+    border: 2px solid #3B1F9E;
+    box-shadow: 0px 0px 4px 1px #3B1F9E;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 575px){
+    .container{
+        margin-top: 65px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 20px;
+        width: fit-content;
     }
 
-    .form-box label{
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 30px;
-        line-height: 60px;
+    .address-area{
+        padding: 20px;
+        margin-top: 20px;
+        font-size: large;
         text-align: center;
-        color: black;
     }
 
-    .form-box input, textarea {
-        width: 100%;
+    h1{
+        text-align: center;
     }
-
-    @media (max-width: 480px){
-        .form-area{
-            width: fit-content;
-            margin-left: 7px;
-        }
-        
-        .address-area{
-            padding: 20px;
-            margin-top: 20px;
-            font-size: larger;
-            text-align: center;
-        }
-
-        address{
-            text-align: center;
-        }
-    }
-
-    @media (min-width: 481px) and (max-width: 767px){
-        .form-area{
-            width: fit-content;
-            margin-left: 10px;
-            margin-right: 10px;
-            padding: 20px;
-        }
-
-        .container{
-            margin: auto;
-            margin-top: 100px;
-            margin-bottom: 200px;
-        }
-
-        .address-area{
-            padding: 20px;
-            margin-top: 20px;
-            font-size: larger;
-            text-align: center;
-        }
-
-        address{
-            text-align: center;
-        }
-    }
-
-    @media (min-width: 768px) and (max-width: 979px){
-        .address-area{
-            font-size: larger;
-            text-align: center;
-            padding: 20px;
-        }
-    }
-
-    @media (min-width: 980px){
-        .address-area{
-            font-size: larger;
-            text-align: center;
-            padding: 20px;
-        }
-    }
+}
