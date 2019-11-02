@@ -20,7 +20,7 @@ textarea {
 	margin: 2px;
 	outline: none;
 }
-.btn_file{
+/*.btn_file{
 	border-radius: 20px;
 	background-color: #EDEDF4;
 	color: #3B1F9E;
@@ -32,7 +32,7 @@ textarea {
    line-height: 130%;
    padding: 4px;
    outline: none;
-}
+}*/
 .btn_text{
 	border-radius: 20px;
 	background-color: #3B1F9E;
@@ -45,7 +45,7 @@ textarea {
    line-height: 130%;
    padding: 4px;
    outline: none;
-   margin-left: -30px;
+   /*margin-left: -30px;*/
 }
 .para_btn{
 	background-color: #3B1F9E;	
