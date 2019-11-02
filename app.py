@@ -34,15 +34,13 @@ def upload():
         file = request.files['file']
         # if no file is selected
         if file.filename == '':
-            return render_template('plagiarism.html', text='No file selected')
-        if not file:
             data=request.form.get('text')
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
                 return render_template('plagiarism.html', text=replyy)
             # extract the text and display it
-            return render_template('plagiarism.html', text='Result: '+q+', max percentage match: '+t)
+            return render_template('plagiarism.html', text='Result: '+q+', percentage match: '+t)
 
         if file and allowed_file(file.filename):
             fname = secure_filename(file.filename)
@@ -69,7 +67,7 @@ def upload():
                 replyy = 'Sorry Character could not be clearly recognized'
                 return render_template('plagiarism.html', text=replyy)
             # extract the text and display it
-            return render_template('plagiarism.html', text='Result: '+q+', max percentage match: '+t)
+            return render_template('plagiarism.html', text='Result: '+q+', percentage match: '+t)
     
     return render_template('plagiarism.html')
 def allowed_file(filename):
