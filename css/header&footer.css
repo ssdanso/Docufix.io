@@ -12,9 +12,9 @@ body{
     height: 100%;
     
 }
-#image{
-    width: 150%;
-    height: 150%;
+img{
+    /* width: 150%; */
+    /* height: 150%; */
 }
 .navbar{
     background-color: #ffffff;

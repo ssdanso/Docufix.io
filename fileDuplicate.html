@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Docufix | Header & Footer</title>
+        <title>Remove Duplicate | Docufix </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
@@ -14,9 +14,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="./css/wysiwyg.css">
-  <link rel="stylesheet" href="fileUpload.css">
-  <link rel="stylesheet" type="text/css" href="css/fileDuplicate.css">
+  <link rel="stylesheet" href="css/fileupload.css">
   <link rel="stylesheet" type="text/css" href="css/header&footer.css">
+
+  <link rel="stylesheet" type="text/css" href="css/fileDuplicate.css">
 
 
   
@@ -112,35 +113,35 @@
           
           
             <div class="container mt-5 pt-5" style="min-height: 100vh" >
-                    <div class="row">
-                            <div class="col-md-8 duplicate-file-header">
-                
-                                <div class="row custom-row">
-                                    <div class="col-xs-3">
-                                            <div class="white-circle"></div>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <div class="page-description">
-                                            <h2>Remove Duplicate</h2>
-                                            <p>Docufix is one of the most innovative Technology of our age. Built solidly with the latest technical tools for file and data management.</p>
-                                        </div>
-                                    </div>
-                          
-                                </div>
-                
-                            </div>
-                
-                            <div class="col-xs-4 tools-link-box">
-                                <div class="tools-btn-block">
-                                <p>Other Tools:</p>
-                                    <button class="btn tools-btn">Grammar Check</button>
-                                    <button class="btn tools-btn">Check for duplicates</button>
-                
-                                </div>
-                            <div class="btn float-right " style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()">Instructions</div>
-
+              <div class="row">
+                <div class="col-md-7  ml-0 ml-md-4 duplicate-file-header">
+    
+                    <div class="row custom-row">
+                        <div class="col-xs-3">
+                                <div class="white-circle"></div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="page-description">
+                                <h2>Remove Duplicate</h2>
+                                <p>Docufix is one of the most innovative Technology of our age. Built solidly with the latest technical tools for file and data management.</p>
                             </div>
                         </div>
+              
+                    </div>
+    
+                </div>
+    
+                <div class="col-md-4 ml-0 ml-md-3 mt-4 mt-md-0 p-2 tools-link-box">
+                    <div class="tools-btn-block">
+                    <p>Other Tools:</p>
+                        <button class="btn tools-btn">Grammar Check</button>
+                        <button class="btn tools-btn">Check for duplicates</button>
+    
+                    </div>
+                <div class="btn float-right " style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()">Instructions</div>
+
+                </div>
+            </div>
               <div>
                   
               <!-- <h2 class="text-center text-light p-3 mt-5 ">
@@ -152,15 +153,18 @@
                       src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
                   </a></span>
               </h2> -->
-              <div class="switch-btn-block">
-                    <a href="#" id="fileBtn" class="switch-btn-file tab-active ">
-                        File
-                    </a>
-                    <a href="#" id="textBtn" class="switch-btn-text">
-                        Text
-                    </a>
-        
+              <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                  <div class="btn p-0 rounded-pill py-2" style=" background-color: rgba(59, 31, 158, 0.05)">
+                    <div class=" btn rounded-pill active1 px-0"  id="fileBtn"><a href="#" class=" px-5 py-3 rounded-pill "
+                      style="text-decoration: none; margin-right: 10px;">File</a></div>
+                    <div class="btn rounded-pill px-0"  id="textBtn"><a class="px-5 py-3 rounded-pill " href="#"
+                      style="text-decoration: none; margin-left: 10px">Text
+                    </a></div>
                 </div>
+                </div>
+            </div>
+            
         
               <div id="file">
                 <div class="text-center mt-5">

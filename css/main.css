@@ -7,13 +7,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Nunito", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 .banner-wrapper {
   width: 90%;
   margin: auto;
-  padding-top: 50px;
+  padding-top: 60px !important;
 }
 
 .banner-wrapper h3 {
@@ -60,7 +60,7 @@ body {
 
 .content-wrapper {
   background-color: #E5E5E5;
-  margin: 20px 0px;
+  margin: 30px auto !important;
   padding: 5px 30px;
 }
 
@@ -362,6 +362,10 @@ body {
 }
 
 @media (min-width: 900px) {
+  .banner-wrapper {
+        padding-top: 10px !important;    
+    }
+  
   .banner-wrapper .b-btn {
     padding: 10px 20px;
   }
