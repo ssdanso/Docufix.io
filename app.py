@@ -31,8 +31,8 @@ def upload():
         # check if there is a file in the request
         if 'file' not in request.files:
            data=request.form.get('text')
-            q,t = sim(c)
-            if q == '':
+           q,t = sim(c)
+           if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
                 return render_template('plagiarism.html', text=replyy)
             # extract the text and display it
