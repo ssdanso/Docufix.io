@@ -16,7 +16,7 @@ from flask import Flask, request,render_template
 from werkzeug.utils import secure_filename
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg','bmp','pdf','svg','epub','docx','txt'])
 app = Flask(__name__)
-UPLOAD_FOLDER = './templates'
+UPLOAD_FOLDER = './'
 app.config['UPLOAD_FOLDER']=UPLOAD_FOLDER
 stop_words = stopwords.words("english")
 extensions1 = ['jpg','png','jpeg','bmp','svg']
@@ -24,19 +24,16 @@ extensions2= ['pdf','xps','epub']
 extensions3=['docx']
 pt.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 # route and function to handle the upload page
-@app.route('/',methods=['POST','GET'])
-def home():
-    return render_template('home.html')
-@app.route('/upload', methods=['GET', 'POST'])
-def upload_page():
+@app.route('/', methods=['GET', 'POST'])
+def upload():
     if request.method == 'POST':
         # check if there is a file in the request
         if 'file' not in request.files:
-            return render_template('upload.html', text='No file selected')
+            return render_template('fileUpload.html', text='No file selected')
         file = request.files['file']
         # if no file is selected
         if file.filename == '':
-            return render_template('upload.html', text='No file selected')
+            return render_template('fileUpload.html', text='No file selected')
 
         if file and allowed_file(file.filename):
             fname = secure_filename(file.filename)
@@ -57,11 +54,11 @@ def upload_page():
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('upload.html', text=replyy)
+                return render_template('fileUpload.html', text=replyy)
             # extract the text and display it
-            return render_template('upload.html', text='Result: '+q+', max percentage match: '+t)
+            return render_template('fileUpload.html', text='Result: '+q+', max percentage match: '+t)
     
-    return render_template('upload.html')
+    return render_template('fileUpload.html')
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 def picture(filename):
