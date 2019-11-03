@@ -155,6 +155,7 @@ if(isset($_POST['submit'])){
          
          .welcome {
              padding-bottom: 2em;
+             margin-top: 100px;
          }
          
          .Already-acc {
