@@ -13,14 +13,16 @@
         .content-box {
 		    padding: 60px 0 60px 0;
 		}
-
+		.user-info h3{
+			color: #3B1F9E !important;
+		}
 		.content-title h3 {
 			font-size: 1.875em !important;
 			font-weight: bold;
 		    text-align: center;
 		    margin: 2% auto;
 		    font-family: 'Nunito', sans-serif !important;
-		    color: #3B1F9E;
+		    color: #3B1F9E !important;
 		}
 
 		.content-title-underline {
