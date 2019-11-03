@@ -86,6 +86,7 @@ if(isset($_POST['submit'])){
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/833e0cadb7.js" crossorigin="anonymous"></script>
          <link rel="manifest" href="manifest.json">
+         <link rel="stylesheet" type="text/css" href="css/header&footer.css">
         <title>Docufix | Signup</title>
 
         <style>
@@ -219,10 +220,27 @@ if(isset($_POST['submit'])){
 
 
     <body class="">
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
+            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto px-5">
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="login.php">Login</a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+    </header>
 
         <section class="container login-section ">
 
-            <h3 class="text-center signUP">Signup</h3>
+            <h3 class="text-center signUP">Welcome, create an account</h3>
             <form class="form-align" method="POST" action="">
                 <div class="form-group col-md-4 ">
                     <input type="text" class="form-control" id="name" name="firstname" placeholder="First Name" pattern="[a-zA-Z]{1,}" data-toggle="tooltip" data-placement="bottom" title="Enter Your First Name" required><span class="error"></span>
@@ -256,7 +274,7 @@ if(isset($_POST['submit'])){
 
                
 
-                <p class="Already-acc">Already have an account?&nbsp;&nbsp; <a href="login.html"><span>Sign in</span></a></p>
+                <p class="Already-acc">Already have an account?&nbsp;&nbsp; <a href="login.php"><span>Sign in</span></a></p>
             </form>
             <span class="error"></span>
         </section>
