@@ -142,7 +142,9 @@ function getCookie(name) {
                     console.log(response.responseJSON);
                     $(".progress").attr("style", "display: none " );
                     progress.remove()
-                    $('#textareaDifferences').val(response.file1)
+                    let delimiter = $('#delimiter').val();
+                    duplicateChecker(response.file1, delimiter)
+                    // $('#textareaDifferences').val(response.file1)
                     toastr.success("Content Loaded Successfully");
                     
                 },
@@ -167,21 +169,22 @@ function getCookie(name) {
 
         e.preventDefault();
       $('#resultArea').attr("style", "display:block");
-
         let separators = [];
         let firstString = $('#textareaBefore').val()
-        let delimiter = $('#delimiter').val()
+        let delimiter = $('#delimiter').val();
+        duplicateChecker(firstString, delimiter)
+
     // let firstStringSet = new Set(firstString.split(new RegExp(separators.join('|'), 'g')))
     // let secondStringSet = new Set(secondString.split(new RegExp(separators.join('|'), 'g')))
 
     // console.log(secondStringSet);
-    let firstStringSet = new Set(firstString.split(delimiter))
-    console.log(firstStringSet)
+    // let firstStringSet = new Set(firstString.split(delimiter))
+    // console.log(firstStringSet)
 
-    let firstStringArray = [...firstStringSet]
-    $('#textareaAfter').val(firstStringArray);
-    $("#textareaDifferences").val(firstStringArray);
-    $("#textareaDifferences").html(firstStringArray);
+    // let firstStringArray = [...firstStringSet]
+    // $('#textareaAfter').val(firstStringArray);
+    // $("#textareaDifferences").val(firstStringArray);
+    // $("#textareaDifferences").html(firstStringArray);
 
     
     // let secondStringArray = secondString.split(new RegExp(separators.join('|'), 'g'))
@@ -300,3 +303,47 @@ $('#uploadURLForm').submit(function(e) {
   }
 })
   
+
+
+
+function duplicateChecker(text, delimiter) {
+  document.getElementById("shareBtn").style.display = "block";
+  $('#resultArea').attr("style", "display:block");
+  let separators = [];
+  let firstString = text;
+
+  // var names = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
+
+  // let firstStringSet = new Set(firstString.split(new RegExp(separators.join('|'), 'g')))
+  // let secondStringSet = new Set(secondString.split(new RegExp(separators.join('|'), 'g')))
+
+  // console.log(secondStringSet);
+  let lowerCaseValue = firstString.toLowerCase().split(delimiter)
+  let standardCaseValue = firstString.split(delimiter)
+  
+
+  const lowerCaseMap = lowerCaseValue.map(x => x.replace('\n', '').trim())
+
+
+  let unique = {};
+  lowerCaseMap.forEach(function(i,v) {
+    if(!unique[i]) {
+      unique[standardCaseValue[v]] = true;
+    }
+  });
+  
+ 
+
+  console.log(Object.keys(unique));
+  
+
+  
+  $('#textareaAfter').val(Object.keys(unique));
+  $("#textareaDifferences").val(Object.keys(unique));
+  $("#textareaDifferences").html(Object.keys(unique));
+
+
+
+
+
+};
