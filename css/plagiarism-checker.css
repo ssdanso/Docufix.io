@@ -130,6 +130,7 @@ justify-content: space-between;
 		margin-left: 20px !important;
 	}
 	.upload {
+		margin-top: 20px;
 		margin-bottom: 50px !important;
 	}
 }
