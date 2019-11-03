@@ -49,49 +49,61 @@
         </header>
         <!--Main-->
         <div class="container-fluid content ">
-          <div class="row ml-3 ">
+          <div class="row ml-3 justify-content-between fc ">
 
-              <div class="col-8 ">
+              <div class="col-xs-6 col-md-6 col-sm-6 col-lg-8">
 
-                <div class="row compare">
-                  <div class="col-3 mt-1 col-xs-12">
+                <div class="row compare col-lg-12 ">
+                  <div class="col-xs-12 mt-1 col-sm-12 col-lg-3">
                     <img src="ci.PNG" class="rounded-circle" width="160px" height="160px">
                   </div>
-                    <div class="col-8 mt-5 ml-n3 col-xs-12">
-                      <h3>Compare Files</h3>
+                    <div class="col-xs-12 mt-5 col-sm-12 col-md-12 col-lg-8 ">
+                      <h3>Check For Plagiarism</h3>
                       <p>Docufix is one of the most innovative Technology of our age. Built solidly with the latest technical tools for file and data management.</p>
                     </div>
                   </div>
                 </div>
 
-              <div class="col-3 other ml-4 pt-5">
+              <div class="col-xs-3 col-sm-12 col-md-4 col-lg-3 other mr-5 pt-5 px-4 align-items-end">
                   <h5>Other Tools:</h5>
                   <div class="row justify-content-around button mt-4">
-                     <a href="#" class="btn col-5" role="button">Grammar check</a>
-                    <a href="#" class="btn col-6" role="button">Check for duplicates</a>
+                     <a href="#" class="btn col-5 " role="button">Grammar check</a>
+                    <a href="#" class="btn col-6 " role="button">Check for duplicates</a>
                   </div>
               </div>
           </div>
-          <div class="row justify-content-center mt-5">
-              <a href="#"><button type="button" class=" btn-1">FILE</button></a>
-              <a href="#"><button type="button" class="btn-2 ml-n4">TEXT</button></a>
-          </div>
+        
           <div class="container pt-5 mt-3 folder mb-5">
             <div class="row no-gutters justify-content-center mx-n3">
-                <div class="col-6 text-center">
-                    <h6>Original Text</h6>
+                <div class="col-lg-12 col-sm-12 col-xs-12 text-start comp-txt">
+                    <h6>Please enter your text below and press Check! </h6>
                 </div> 
-                <div class="col-6 text-center"> 
-                   <h6>Duplicate Text</h6>
+                
+                <div class="form-group col-11 mt-3">
+                    <textarea class="form-control rounded-0" id="FormControlTextarea" rows="15" placeholder="...."></textarea>
                 </div>
-                <div class="form-group col-6">
-                    <textarea class="form-control rounded-0" id="FormControlTextarea1" rows="15">1.</textarea>
+                <div class="row container mx-3 justify-content-between mt-4">
+                    <div class="col-5 upload">
+                      <h6>Or Upload File (.tex, .txt, .doc, .docx, .odt, .pdf, .rtf):</h6>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFileLang" lang="en">
+                        <label class="custom-file-label" for="customFileLang">Choose File</label>
+                      </div>
+                    </div>
+                    <div class="col-5 url">
+                      <h6 class="url-txt">Check Plagiarism via Webpage URL</h6>
+                      <form>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <button class="btn btn-url" type="button">@</button>
+                          </div>
+                          <input type="url" class="form-control" placeholder="url"> 
+                        </div>
+                      </form>
+                    </div>
                 </div>
-                <div class="form-group col-6">
-                    <textarea class="form-control rounded-0" id="FormControlTextarea2" rows="15" >1.</textarea>
-                </div>
-                <div class="col-2 btn-3 text-center">
-                    <a href="#"><button type="button" class=" btn">Compare Files</button></a>
+                <div class="col-2 btn-3 text-center mt-5 mb-5 justify-content-center">
+                    <a href="#"><button type="button" class=" btn">Check!</button></a>
                 </div>
             </div>
             
