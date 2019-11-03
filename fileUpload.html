@@ -447,12 +447,59 @@
                     <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
                   </div>
                   <div id="page"></div>
-                  <div contenteditable="true" id="textareaDifferences"
+                  <div contenteditable="true" id="textareaDifferences" class ="test1"
                     style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
                 <button onclick="document.getElementById('id02').style.display='block'" class="btn-dark mt-2 mb-5"
                   style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>
           
+                  <!--JOVIA SAV AS EMAIL BUTTON-->
+                  <button id ="btn" onclick="CopyDivsToTextArea();" data-toggle="modal"  data-target="#myModal2" class="btn-dark mt-2 mb-5"
+                  style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Save As <strong>Email</strong></button>
+          
+
+                  <!--JOVIAL SAVE AS EMAIL MODAL-->
+
+
+                  <div class="modal fade" id="myModal2" role="dialog">
+                    <div class="modal-dialog">
+                    
+            <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      
+                    </div>
+                    <div class="modal-body">
+                    <form method="POST" action="mailsub.php" id="form">
+                    <p id="msg" name="msg" class="msgbox"></p>
+                      
+                    <input type="text"  id="email" name="docName" placeholder="Please input a doc name" required>
+                       <select type="select" id="email" name="select">
+                        <option value="txt" selected>select doc type</option>
+                        <option value=".txt"> .txt </option>
+                        <option value=".pdf"> .pdf</option>
+                        <option value=".docx"> .docx </option>
+                        <option value=".epub">.epub </option>
+                        <option value=".doc"> .doc</option>
+                       </select>
+                       <input type="email" id="email" name="mail" placeholder="Please input your email Address..." required>
+                            <br />
+                            <textarea id="ta" cols="50" rows="20" name="txt"></textarea>
+                            <br />
+              <!--  -->
+               
+                    <div class="modal-footer">
+                            <button type="submit" name="submit" id="closeSend" class="btn btn-default">Send!</button>
+                      </form>
+            
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            
+
                 <!---MODAL FOR SAVE AS-->
           
           
@@ -1314,5 +1361,76 @@ $(window).on("scroll", function() {
             }
             
             </script>
+
+
+<!--JOVIAL SAVE AS EMAIL SCRIPT BY MAJOR-->
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var delay = 2000;
+    $("#form").submit(function(event){
+      event.preventDefault();
+
+      var email = $('#email').val();
+      if (email == ''){
+        $('.msgbox').html(
+          '<span> Please input field is not suppose to be empty</span>'
+        );
+
+        $('#email').focus();
+        return false;
+      }
+     
+     $('#msg').html('');
+     var values = $(this).serialize();
+       $.ajax ({
+     
+        url : "mailsub.php",
+        type: "POST",
+        data:  $(this).serialize(),
+        beforeSend: function(){
+          $('.msgbox').html(
+            '<span><img src="Loader.gif" width="25" height="25"/> <span style="color:green"> Please wait a sec</span>'
+          );
+        }
+
+      }).done (function(data) {
+          
+        setTimeout(function() {
+                $('.msgbox').html(data);
+                $('#closeSend').hide();
+                $('#ta').hide();
+                $('#email').hide();
+            }, delay);
+        });
+     
+    });
+  });
+
+</script>
+
+<script type="text/javascript">
+
+
+
+
+function CopyDivsToTextArea()
+{
+    var divs = document.getElementsByTagName("div");
+    var textToTransfer = "";
+    var pattern = new RegExp("test1");
+
+   for(var i=0;i<divs.length;i++)
+    {
+    if(pattern.test(divs[i].className))
+        {
+           textToTransfer += (divs[i].innerText || divs[i].textContent);
+        }
+     }
+ document.getElementById("ta").value = textToTransfer;
+}
+
+</script>
+
     </body>
 </html>
