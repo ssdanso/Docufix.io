@@ -6,8 +6,8 @@ body{
 
 .content{
     margin-bottom: 100px;
-    width: 100%;
-    border: 2px solid #3B1F9E;
+    width: 50%;
+/*     border: 2px solid #3B1F9E; */
 }
 
 h2{
