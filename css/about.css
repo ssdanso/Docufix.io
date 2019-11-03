@@ -11,8 +11,8 @@ body{
 }
 
 h2{
-    text-align: right;
-    padding: 20px;
+    text-align: left;
+    padding: 30px;
     color: #3B1F9E;
     font-weight: bold;
 }
