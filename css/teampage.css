@@ -9,24 +9,24 @@
 			width: 100%;
 			margin: 0 auto;
 		}
-                
+              
         .content-box {
 		    padding: 60px 0 60px 0;
 		}
 
 		.content-title h3 {
-		    font-size: 40px;
-		    font-weight: bold;
+			font-size: 1.875em !important;
+			font-weight: bold;
 		    text-align: center;
-		    margin: 0 0 10px 0;
-		    font-family: 'Nunito', sans-serif;
-		    color: #333333;
+		    margin: 2% auto;
+		    font-family: 'Nunito', sans-serif !important;
+		    color: #3B1F9E;
 		}
 
 		.content-title-underline {
 		    width: 100px;
-		    height: 5px;
-		    background-color: #141460;
+		    height: 2px;
+		    background-color: #3B1F9E;
 		    margin: 0 auto 30px auto;
 		}
 
@@ -52,7 +52,8 @@
 
 		.user-image {
 		    background-color: #013A6B;
-		    background-image: -webkit-linear-gradient(-60deg,#3B1F9E  50%, #fff 50%);
+			background-image: -webkit-linear-gradient(-60deg,#3B1F9E  50%, #fff 50%);
+			border: none !important;
 		    min-height: 200px;
 		    padding-top: 50px;
 		    border-radius: 10px;
@@ -135,7 +136,8 @@
 		    background-size: cover;
 		    background-position: center;
 		    border-radius: 50%;
-		    margin: 0 auto;
+			margin: 0 auto;
+			border: none !important;
 		}
 
 
@@ -487,4 +489,4 @@
 			}
 			
 		}
-		@media only screen and (min-width: )
+		
