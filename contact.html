@@ -3,13 +3,15 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Docufix | Header & Footer</title>
+        <title>Docufix | Contact Us</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/header&footer.css">
         <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <!--Header-->
@@ -61,6 +63,61 @@
           </nav>
     </header>
       <!--Main-->
+
+      <!-- About Us Page Starts Here | Authored by @ssd  -->
+
+      <div class="container form-area">
+        <h1>Share your experience with us!</h1>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6">
+                <form id="feedback-form" action="https://formspree.io/ssdanso@live.com" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name (required)</label>
+                        <input class="form-control" id="name" type="text" name="name" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email (required)</label>
+                        <input class="form-control" id="email" type="email" name="Email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Suggestion/Feedback</label>
+                        <textarea class="form-control" id="message" name="Message" style= "height: 200px;"></textarea>
+                    </div>
+                    <input class="btn btn-primary btn-block" style="font-weight: bold" type="submit" value="Submit" />
+                </form>
+            </div>
+            <div class="col-md-6 address-area">
+                    <address class="fa fa-address-card" aria-hidden="true"> No 3 Birrel Avenue, off Herbert Macaulay Way, Sabo, Yaba, Lagos.</address>
+                    <p class="fa fa-phone" aria-hidden="true">   +234 700 880 8800</p><br>
+                    <p class="fa fa-paper-plane" aria-hidden="true">   info@docufix.ga</p>
+                </div>
+        </div>
+          <!-- <h2>About Docufix</h2>
+          <p><b style="font-size: 2em; color: #3B1F9E;">Docufi</b><b style="font-size: 2em; color: #FF9400;">x</b>
+              is one of the most innovative Technology of our age. Built solidly with the latest technical tools for 
+              file and data management. This Magnificient tool was built by the most intellectual young coders from HNGi6 
+              Internship.
+            
+          </p>
+          
+          <p>
+              With the help of our finest refined data management algorithm, we help you sort, arrange, compare and extract 
+              information from different file formats. We give you the Super power to compare two totally different documents 
+              in different file formats. With Docufix you have the potential to know exactly the difference and similarities 
+              between two files, extract texts from the files and also download the files in file formats like: .docx, .pdf
+            
+          </p>
+          
+          <p>
+              This tool is as easy as picking up your mobile phone to send a text message. Simply go to the comparison page, 
+              paste your copied texts to compare, or click on file upload your file type and extract and compare.
+            
+          </p> -->
+        </div>       
+
+        <!-- About Us Page Ends Here | Authored by @ssd  -->
      
       <!--Footer-->
       <footer id="footer">
@@ -69,7 +126,7 @@
                   <div class="col-sm-12 text-center">
                       <ul class="list-inline text-center">
                           <li class="list-inline-item">
-                            <p class="text-center" href="#">&copy; 2019 Copyright <a href="index.html">Docufix</a></p>
+                            <a class="text-center" href="#">&copy; 2019 Copyright Docufix</a>
                           </li>
                           <li class="list-inline-item">
                             <a class="text-center" href="faq.html">FAQ</a>

@@ -14,9 +14,9 @@ body{
     overflow-x: hidden;
     
 }
-img{
+#image{
     width: 150%;
-    height: 150%;
+     height: 150%;
 }
 .navbar{
     background-color: #ffffff;
