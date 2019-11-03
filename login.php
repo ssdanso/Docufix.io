@@ -57,6 +57,7 @@ if(isset($_POST['submit'])){
     <script src="https://kit.fontawesome.com/833e0cadb7.js" crossorigin="anonymous"></script>
      <link rel="manifest" href="manifest.json">
     <title>Docufix | Login</title>
+    <link rel="stylesheet" type="text/css" href="css/header&footer.css">
 
     <style>
          body {
@@ -192,6 +193,23 @@ if(isset($_POST['submit'])){
 
 <body>
 
+    <header>
+          <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
+            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto px-5">
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="signup.php">Sign Up</a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+    </header>
     <section class="container login-section ">
         <div class="text-center spacing">
 
