@@ -181,6 +181,7 @@ if(isset($_POST['submit'])){
                  font-size: 25px;
                  line-height: 30px;
                  margin-bottom: 1rem;
+                 margin-top: 100px;
              }
              
              .welcome {
@@ -188,7 +189,7 @@ if(isset($_POST['submit'])){
              }
              
              .Already-acc {
-                 margin-top: 1em;
+                 margin-top: 10px;
                  font-size: 18px;
                  line-height: 21px;
                  font-style: normal;
