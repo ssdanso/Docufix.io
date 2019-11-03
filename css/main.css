@@ -7,13 +7,31 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Nunito", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 .banner-wrapper {
   width: 90%;
-  margin: auto;
-  padding-top: 10px !important;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px !important;
+  margin: 20px auto 40px;
+}
+
+.banner {
+  width: 100%;
+}
+
+.banner-img {
+  display: none;
+  width: 40%;
+}
+
+.banner-img img {
+  display: block;
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
 }
 
 .banner-wrapper h3 {
@@ -335,7 +353,7 @@ body {
     margin: auto;
   }
   .plan-text {
-    padding: 50px;
+    /* padding: 50px; */
   }
 }
 
@@ -343,15 +361,6 @@ body {
   .plan-wrapper {
     width: 100%;
     margin: auto;
-  }
-  .plan-text {
-    padding: 30px;
-  }
-}
-
-@media (max-width: 1172px) {
-  .plan-text {
-    padding: 20px;
   }
 }
 
@@ -362,6 +371,25 @@ body {
 }
 
 @media (min-width: 900px) {
+  .banner-wrapper {
+        padding-top: 25px !important;    
+    }
+
+    .banner {
+      width: 90%;
+    }
+
+    .banner-text {
+      width: 100% !important;
+    }
+    
+    .banner-img {
+      display: block;
+      width: 80%;
+      padding-left: 30px;
+      box-sizing: border-box;
+    }
+  
   .banner-wrapper .b-btn {
     padding: 10px 20px;
   }
@@ -381,7 +409,6 @@ body {
   .plan-text {
     margin-top: 50px;
     text-align: left;
-    padding: 70px;
   }
   .plan-text p:first-child,
   .plan-text .pt {
@@ -396,7 +423,7 @@ body {
   .banner-text {
     width: 50%;
     margin-top: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
   .banner-text h3 {
     font-size: 43px;
