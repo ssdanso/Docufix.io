@@ -4,7 +4,7 @@ body{
     border-color: #3B1F9E;
 }
 
-.container-fluid{
+.content{
     margin-bottom: 100px;
     width: 100%;
     border: 2px solid #3B1F9E;
@@ -29,7 +29,7 @@ h2{
   }
 
   @media (max-width: 575px){
-    .container-fluid{
+    .content{
         margin-top: 100px;
         margin-right: 10px;
         padding: 20px;
