@@ -13,7 +13,7 @@ body {
 .banner-wrapper {
   width: 90%;
   margin: auto;
-  padding-top: 60px !important;
+  padding-top: 73px !important;
 }
 
 .banner-wrapper h3 {
@@ -363,7 +363,7 @@ body {
 
 @media (min-width: 900px) {
   .banner-wrapper {
-        padding-top: 10px !important;    
+        padding-top: 25px !important;    
     }
   
   .banner-wrapper .b-btn {
