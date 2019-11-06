@@ -1,31 +1,93 @@
+*{
+    scroll-behavior: smooth;
+}
+
 body{
-    margin: 5px;
-    text-align: justify;
-    border-color: #3B1F9E;
+    font-family: 'Nunito',sans-serif !important;
+    margin: auto;
+    padding: auto;
+    background-color: #FFFFFF;
+}
+
+.navbar{
+    background-color: #3B1F9E;
+    color: #FFFFFF !important;
+}
+
+.nav-link, button.navbar-toggler {
+    color: #FFFFFF !important;
+}
+
+a:hover{
+    text-decoration: none !important;
+    color: #FF9400 !important;
+}
+
+.container-fluid{
+    background-color: #3B1F9E; 
+    height: 300px;
+    color: #FFFFFF;
 }
 
 .container{
-    margin-bottom: 40px;
+    width: fit-content;
 }
 
-.address-area{
-    font-size: large;
-    padding: 20px;
-}
-
-h1{
-    color: #3B1F9E;
+h3{
+    text-align: center;
+    margin: 0em 5em 0em 5em;
+    margin-top: -2em;
+    color: #FFFFFF;
+    padding: -1em;
+    font-weight: bolder;
 }
 
 h2{
-    text-align: right;
-    padding: 20px;
-    color: #3B1F9E;
-    font-weight: bold;
+    font: weight 800; 
+    font-size: 24px;
+    line-height: 33px;
+    color: rgba(51, 51, 51, 0.8);
 }
 
-hr{
-    background: #3B1F9E;
+h4{
+    color: rgba(51, 51, 51, 0.8);
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: -1.5em;
+    margin-bottom: 1em;
+}
+
+h2, h4{
+    padding: 16px !important; 
+}
+
+.col-md-10{
+    margin: auto;
+    margin-bottom: -1em;
+    margin-left: 1em;
+}
+
+.footer{
+    position: absolute;
+    width: fit-content;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 14px;
+    color: #828282 !important;
+    margin: 2em;
+}
+
+.footer-bottom-wrapper{
+    text-align: center !important;
+    margin-left: 35em;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.footer-bottom-links{
+    padding: 0rem 1rem 0rem 1rem;
+    color: #828282 !important;
 }
 
 .btn-primary{
@@ -33,35 +95,108 @@ hr{
     border-color: #3B1F9E;
 }
 
-.form-area {
-    font-weight: normal;
-    font-family: Nunito;
-    font-size: 14px;
-    width: fit-content;
-    padding-bottom: 10px;
-    margin-top: 100px;
-    border: 1px solid #3B1F9E;
-    box-shadow: 0px 0px 2px 1px #3B1F9E;
-    border-radius: 2px;
-  }
+.btn-primary:hover{
+    text-decoration: none !important;
+    color: #FF9400 !important;
+}
 
-  @media (max-width: 575px){
+.form-box {
+    padding:2em;
+    margin:auto;
+    margin-top: -1em;
+    min-height: 40px;
+}
+
+.form-box input, textarea {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px){
     .container{
-        margin-top: 65px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        padding: 20px;
+        margin: auto;
+    }
+
+    .form-box {
+        margin-top: -1em;
+        max-width: 100%;
+        padding: 2rem;
+        margin: auto;
+        }
+    
+    h2{
+        margin-top: -1em;
+    }
+}
+
+@media only screen and (max-width: 770px){
+    .form-box {
+        margin-top: 0em;
+        }
+    h2{
+        margin-top: -.5em;
+    }
+}
+
+@media only screen and (max-width: 490px){
+    .form-box {
+        margin-top: 0em;
+        }
+    h2{
+        margin-top: -.5em;
+    }
+}
+
+
+@media only screen and (max-width:500px){
+    body{
+        text-align: center;
         width: fit-content;
+        margin: auto;
     }
 
-    .address-area{
-        padding: 20px;
-        margin-top: 20px;
-        font-size: large;
+    .navbar{
+        width: 100%;
+    }
+    
+    h3{
+        color: #3B1F9E;
+        font-size: 1.5em;
         text-align: center;
+        margin-top: 2.5em;
+        margin-bottom: -1em;
     }
 
-    h1{
+    .container-fluid{
+        display: none;
+    }
+    
+    .container{
+        width: fit-content;
+        padding: 1em;
+    }
+
+    .form-box{
+        margin: auto;
+    }
+
+    .footer{
+        margin: auto;
+        padding: 0em;
+        margin-left: 3em;
+        margin-right: 3em;
+
+    }
+
+    .footer-bottom-wrapper{
+        margin: auto;
+        margin-left: 3em;
+        margin-right: 3em;
+        padding: 0rem;
+    }
+    
+    .footer-bottom-links{
+        padding: .2rem;
         text-align: center;
+        width: fit-content;
     }
 }
